@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registro de Vivencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Título</ion-label>
+      <ion-input [(ngModel)]="titulo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY HH:mm" [(ngModel)]="fecha"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Descripción</ion-label>
+      <ion-textarea [(ngModel)]="descripcion" rows="4"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Foto</ion-label>
+      <input type="file" (change)="cargarFoto($event)">
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Audio</ion-label>
+      <ion-button expand="full" (click)="grabarAudio()" [disabled]="audioGrabado">Grabar Audio</ion-button>
+      <audio controls *ngIf="audioGrabado">
+        <source [src]="audioUrl" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="guardarVivencia()">Guardar</ion-button>
+</ion-content>

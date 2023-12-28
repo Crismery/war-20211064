@@ -1,7 +1,8 @@
 {
   "name": "war_20211064",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

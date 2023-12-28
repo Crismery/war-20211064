@@ -1,0 +1,21 @@
+.imagen-personalizada {
+    width: 150px;
+    height: 150px;
+  }
+  .ion-card-content p {
+    font-size: 16px; /* Tamaño de fuente personalizado */
+    color: black; /* Cambia el color del texto a negro */
+  }
+
+  .background {
+    background-image: url('../../assets/fondo.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%; 
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listado de vivencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <p>Vivencias de los soldados</p>
+  <ion-list>
+    <ion-item *ngFor="let vivencia of vivencias">
+      <ion-label>{{ vivencia.titulo }}</ion-label>
+      <ion-label>{{ vivencia.titulo }}</ion-label>
+      <ion-label>{{ vivencia.fecha }}</ion-label>
+      <ion-label>{{ vivencia.foto }}</ion-label>
+      <ion-button slot="end" (click)="borrarVivencia(vivencia.id)">Borrar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
